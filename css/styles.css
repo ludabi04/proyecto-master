@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Propiedades del contenedor*/
+
+.contenedor {
+    background-color: tomato;
+    display: grid;
+    height: 600px;
+    grid-template-columns: ;
+    grid-template-rows: ;
+
+    grid-template-areas:  
+        "header header header"
+        "main main div"
+        "section section div"
+        "footer footer footer";
+}
+
+
+/*propiedades de los hijos*/
+
+.hijos-uno {
+    background-color: pink;
+    grid-area: header;
+}
+
+
+.hijos-dos {
+    background-color: cyan;
+    grid-area: main;
+}
+
+
+.hijos-tres {
+    background-color: blue;
+    grid-area: div;
+}
+
+
+.hijos-cuatro {
+    background-color: greenyellow;
+    grid-area: section;
+
+
+}
+
+.hijos-cinco {
+    background-color: grey;
+    grid-area: footer;
+}
+
+.ejemplo {
+    justify-items: center;
+    align-items: center;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(2, 1fr);
+}
+/*estilo de hijo por separado*/
+
+.hijo-uno, .hijo-cuatro{
+    justify-self: left;
+    align-self: start;
+    
+}
+
+
+
+/* Estilos ejemplo-dos*/
+.contain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.8fr ;
+    grid-template-rows: 0.8fr 2fr 2fr 0.8fr;
+
+    grid-template-areas: 
+        "header header header header"
+        "main main main section"
+        "main main main section"
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: green;
+    display: flex;
+}
+
+
+main {
+    grid-area: main;
+    background-color: pink;
+}
+
+
+section {
+    grid-area: section;
+    background-color: cyan;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: aquamarine;
+}
